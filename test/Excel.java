@@ -36,7 +36,6 @@ public class Excel {
         columnNames = currentString.split("\t");
     
         //Gets the rest of the lines
-        int i = 0;
         while((currentString = br.readLine()) != null) {
 
             //This section is specifically to replace commas and quotations around the floating point transaction amounts
@@ -46,8 +45,6 @@ public class Excel {
             String[] currentLine = currentString.split("\t");
 
             //Add to the arrays
-//!!for debugging (REMOVE WHEN DONE)
-            System.out.println(path + " " + i);
             try {
                 //This if statement is so that the sums that appear between sections do not get their info stripped
                 //Can be changed if needed
@@ -67,8 +64,6 @@ public class Excel {
             } catch (Exception e) {
                 // TODO: handle exception
             }
-//!!for debugging (REMOVE WHEN DONE)
-            i++;
         }
         br.close();
     }
