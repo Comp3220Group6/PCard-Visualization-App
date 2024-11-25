@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 //This class contains the excel files in a list
 public class ExcelList {
-    public ArrayList<Excel> excelList = new ArrayList<Excel>();
+    public ArrayList<Excel> excelList = new ArrayList<>();
 
     public ExcelList(String year) throws IOException {
         //specific path for files
@@ -16,8 +16,8 @@ public class ExcelList {
                 for (File file : listOfFiles) {
                     if (file.isFile()) {
                         System.out.println(file.getName());
-                        Excel e;
-                        excelList.add(e = new Excel(file.getAbsolutePath()));
+                        Excel e = new Excel(file.getAbsolutePath());
+                        excelList.add(e);
                     }
                 }
             }
