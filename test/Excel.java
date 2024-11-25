@@ -49,6 +49,8 @@ public class Excel {
 //!!for debugging (REMOVE WHEN DONE)
             System.out.println(path + " " + i);
             try {
+                //This if statement is so that the sums that appear between sections do not get their info stripped
+                //Can be changed if needed
                 if (currentLine[0] != "") {
                     division.add(currentLine[0]);
                     transactionid.add(currentLine[1]);
