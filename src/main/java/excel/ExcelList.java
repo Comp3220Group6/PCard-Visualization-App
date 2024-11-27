@@ -1,4 +1,4 @@
-package test;
+package excel;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -6,6 +6,8 @@ import java.util.ArrayList;
 //This class contains the excel info in a list
 public class ExcelList {
     public ArrayList<Excel> excelList = new ArrayList<Excel>();
+
+    public ExcelList() {}
 
     public ExcelList(String year) throws IOException {
         //specific path for files
@@ -23,7 +25,11 @@ public class ExcelList {
             }
         }
         System.out.println(excelList.size());
-        System.out.println(excelList.getFirst().getSumOfTrans());
+        float sum = 0;
+        for (Excel e : excelList) {
+            sum += e.getSumOfTrans();
+        }
+        System.out.println(sum);
     }
 
     public ArrayList<Excel> getExcelList(){

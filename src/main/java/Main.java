@@ -1,13 +1,6 @@
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.*;
-import java.util.ArrayList;
+import java.io.IOException;
 
-import test.*;
-
-import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
+import javax.swing.JFrame;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -18,9 +11,5 @@ public class Main {
         // Make the frame visible
         frame.setLocationRelativeTo(null); // Center the frame
         frame.setVisible(true);
-
-
-
     }
-
 }
